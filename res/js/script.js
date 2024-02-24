@@ -15,6 +15,8 @@ const vayne = new Champ("Vayne", 100, 25, 10, 4);
 
 const player = new Player();
 
+
+// GAME STARTS
 startBtn.onclick = () => {
   document.body.style.backgroundImage = "none";
   document.body.style.backgroundColor = "black";
