@@ -60,8 +60,8 @@ const gameLoop = () => {
 };
 
 const resizeCanvas = () => {
-  canvas.width = cWidth;
-  canvas.height = cHeight;
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
 };
 
 const clearCanvas = () => {
