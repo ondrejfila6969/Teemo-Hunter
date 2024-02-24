@@ -1,5 +1,5 @@
 # Teemo Hunter
-[Play](https://ondrejfila6969.github.io/Osu/)
+[Play](https://ondrejfila6969.github.io/Teemo-Hunter/)
 
 
 
