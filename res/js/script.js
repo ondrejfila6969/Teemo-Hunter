@@ -72,9 +72,18 @@ const clearCanvas = () => {
 
 const update = () => {
   jinx.update();
-  caitlyn.update();
-  ezreal.update();
-  vayne.update();
+
+  if(jinx.hp <= 0) {
+      caitlyn.update();
+  }
+
+  if(caitlyn.hp <= 0) {
+      ezreal.update();
+  }
+
+  if(ezreal.hp <= 0) {
+      vayne.update();
+  }
   player.update(keys);
 
   Champ.detectHit(player.dart, jinx);
@@ -94,18 +103,18 @@ const render = () => {
 
   // Načítání dalších postav + kontrola vítězství:
   if (jinx.hp <= 0) {
-    caitlyn.draw(ctx);
-    caitlyn.dart.draw(ctx);
+      caitlyn.draw(ctx);
+      caitlyn.dart.draw(ctx);
   }
 
   if (caitlyn.hp <= 0) {
-    ezreal.draw(ctx);
-    ezreal.dart.draw(ctx);
+      ezreal.draw(ctx);
+      ezreal.dart.draw(ctx);
   }
 
   if (ezreal.hp <= 0) {
-    vayne.draw(ctx);
-    vayne.dart.draw(ctx);
+      vayne.draw(ctx);
+      vayne.dart.draw(ctx);
   }
 
   if (vayne.hp <= 0) {
