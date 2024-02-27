@@ -17,8 +17,8 @@ export class Champ {
       y: 10,
     };
     this.velocity = {
-      x: 1,
-      y: 1,
+      x: 1.25,
+      y: 1.25,
     };
     this.canShoot = true;
     this.dart = new EnemyDart();

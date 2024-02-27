@@ -72,29 +72,27 @@ const clearCanvas = () => {
 
 const update = () => {
   jinx.update();
-
+  Champ.detectHit(player.dart, jinx);
+  Player.detectHit(jinx.dart, player);
+  
   if(jinx.hp <= 0) {
       caitlyn.update();
+      Champ.detectHit(player.dart, caitlyn);
+      Player.detectHit(caitlyn.dart, player);
   }
 
   if(caitlyn.hp <= 0) {
       ezreal.update();
+      Champ.detectHit(player.dart, ezreal);
+      Player.detectHit(ezreal.dart, player);
   }
 
   if(ezreal.hp <= 0) {
       vayne.update();
+      Champ.detectHit(player.dart, vayne);
+      Player.detectHit(vayne.dart, player);
   }
   player.update(keys);
-
-  Champ.detectHit(player.dart, jinx);
-  Champ.detectHit(player.dart, caitlyn);
-  Champ.detectHit(player.dart, ezreal);
-  Champ.detectHit(player.dart, vayne);
-
-  Player.detectHit(jinx.dart, player);
-  Player.detectHit(caitlyn.dart, player);
-  Player.detectHit(ezreal.dart, player);
-  Player.detectHit(vayne.dart, player);
 };
 
 const render = () => {

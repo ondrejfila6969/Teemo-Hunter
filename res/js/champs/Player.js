@@ -104,7 +104,7 @@ class Dart {
     }
 
     draw(ctx){
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "lime";
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
